@@ -1,9 +1,9 @@
 #include<pthread.h>
 #include<stdio.h>
 int avg=0,min=0,max=0;
-void *average(void *a);
-void *minimum(void *a);
-void *maximum(void *a);
+void *average(void *a);                                             //to calculate average value
+void *minimum(void *a);                                             //to calculate minimum value
+void *maximum(void *a);                                             //to calculate maximum value
 void *average(void *a)
 { int *q=(int*)(a);
   int n=*q;
@@ -44,8 +44,8 @@ int main()
   printf("Enter the total no. of observations : ");
   scanf("%d",&n);
   int values[n+1];
-  values[0]=n;
-  int *p=&values[0];
+  values[0]=n;                                                          //first index of the array hold the total no. of elements
+  int *p=&values[0];                                                    // pointer p holds memory address of the array
   printf("Enter the %d values \n",n);
   for(int i=1;i<n+1;i++)
       scanf("%d",&values[i]);
