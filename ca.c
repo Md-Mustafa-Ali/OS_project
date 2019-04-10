@@ -1,6 +1,6 @@
 #include<pthread.h>
 #include<stdio.h>
-float avg=0.0,min=0.0,max=0.0;
+int avg=0,min=0,max=0;
 void *average(void *a);
 void *minimum(void *a);
 void *maximum(void *a);
@@ -55,7 +55,7 @@ int main()
   pthread_join(th1,NULL);
   pthread_join(th2,NULL);
   pthread_join(th3,NULL);
-  printf("\nThe average value is %0.1f\n",avg);
-  printf("The minimum value is %0.1f\n",min);
-  printf("The maximum value is %0.1f\n",max);
+  printf("\nThe average value is %d\n",avg);
+  printf("The minimum value is %d\n",min);
+  printf("The maximum value is %d\n",max);
 }
