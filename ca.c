@@ -1,6 +1,9 @@
 #include<pthread.h>
 #include<stdio.h>
 float avg=0.0,min=0.0,max=0.0;
+void *average(void *a);
+void *minimum(void *a);
+void *maximum(void *a);
 void *average(void *a)
 { int *q=(int*)(a);
   int n=*q;
