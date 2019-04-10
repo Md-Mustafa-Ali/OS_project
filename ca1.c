@@ -29,7 +29,7 @@ int main()
      printf("Enter a string to reverse the case : \n");
      n=read(0,buff1,100);                                    //input from user
      write(a[1],buff1,n);                                    //write on pipe
-     wait(NULL);                                             //switch to the child process
+     wait(NULL);                                             //switch to the other process
      printf("String with reversed case : \n");
      n=read(b[0],buff1,n);                                   //read processed string from pipe
      write(1,buff1,n);                                       //print on terminal
