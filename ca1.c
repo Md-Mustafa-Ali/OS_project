@@ -7,7 +7,7 @@ int main()
   pipe(a);
   pipe(b);
   p=fork();
-  if(p!=0)
+  if(p==0)
    { int c;
      char buff2[100];
      n=read(a[0],buff2,100);                                  //read the string which is to be processed 
