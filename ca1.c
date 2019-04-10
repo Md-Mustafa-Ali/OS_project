@@ -26,10 +26,11 @@ int main()
    }
   else
    { char buff1[100];
-     printf("Enter a string : \n");
+     printf("Enter a string to reverse the case : \n");
      n=read(0,buff1,100);
      write(a[1],buff1,n);
      wait(NULL);
+     printf("String with reversed case : \n");
      n=read(b[0],buff1,n);
      write(1,buff1,n);
    }
